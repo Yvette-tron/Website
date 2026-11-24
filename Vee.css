@@ -1,0 +1,129 @@
+body{
+    background-color:rgb(10, 7, 7);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px;
+}
+h1{
+    color:pink;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+   margin-bottom: 10px;
+   align-self: center;
+}
+p{
+    color:plum;
+    font-size: 16px;
+    font-family: cursive;
+}
+h2{
+    color: plum;
+    font-size: 15px;
+    font-family: cursive;
+   
+}
+.checklist label{
+    color: rgba(178, 20, 226, 0.61);
+    font-size: 14px;
+    font-family: cursive;
+   margin-left: 10px;
+}
+.checklist li{
+    margin-bottom: 14px;
+}
+.flower {
+  position: fixed; 
+  width: 24px;
+  height: 24px;
+  background: #ffd166; 
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.flower span {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  top: -1px;
+  left: -1px;
+  box-shadow: 
+    0 -22px 0 pink,
+    21px -7px 0 pink,
+    13px 18px 0 pink,
+    -13px 18px 0 pink,
+    -21px -7px 0 pink;
+}
+@keyframes gentleSpin {
+  from {
+    transform: rotate(0deg) scale(var(--size, 1));
+  }
+  to {
+    transform: rotate(360deg) scale(var(--size, 1));
+  }
+}
+
+.f1 {
+  top: 18%;
+  right: 18%;
+  --size: 1.2;
+  animation: gentleSpin 18s linear infinite;
+}
+
+.f2 {
+  top: 48%;
+  right: 10%;
+  --size: 0.9;
+  animation: gentleSpin 24s linear infinite reverse; /* Spins the opposite way */
+}
+
+.f3 {
+  top: 72%;
+  right: 22%;
+  --size: 1.4;
+  animation: gentleSpin 30s linear infinite;
+}
+.f3 span {
+  box-shadow: 
+    0 -22px 0 plum,
+    21px -7px 0 plum,
+    13px 18px 0 plum,
+    -13px 18px 0 plum,
+    -21px -7px 0 plum;
+}
+.countdown-box {
+  position: fixed;
+  top: 42%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+
+.cute-btn {
+  background-color: #1f1829;
+  color: pink;
+  border: 2px solid plum;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-family: cursive;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(255, 192, 203, 0.35);
+  transition: transform 0.2s, background-color 0.2s;
+  margin-top: 300px;
+}
+
+.cute-btn:hover {
+  background-color: plum;
+  color: black;
+  transform: scale(1.08);
+}
+
+.countdown-msg {
+  margin-top: 14px;
+  color: rgb(184, 138, 228);
+  font-family: cursive;
+  font-size: 18px;
+}
